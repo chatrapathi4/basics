@@ -4,10 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="button.css">
-    <title>Document</title>
+    <title>Buttons Gallery</title>
 </head>
 <body>
-    <h1>Button Page</h1>
-    <button class="btn">RGB</button>
+    <h1>Button Gallery</h1>
+
+    <div class="container">
+        <div class="card">
+            <button class="btn glow">RGB Glow</button>
+            <p class="desc">Animated RGB glow using a blurred gradient (original).</p>
+        </div>
+
+        <div class="card">
+            <button class="btn btn-outline no-glow">Outline</button>
+            <p class="desc">Transparent background with a white outline.</p>
+        </div>
+
+        <div class="card">
+            <button class="btn btn-simple no-glow">Simple</button>
+            <p class="desc">Minimal solid button without glow.</p>
+        </div>
+
+        <div class="card">
+            <button class="btn btn-rounded no-glow">Rounded</button>
+            <p class="desc">Extra rounded pill-style button.</p>
+        </div>
+
+        <div class="card">
+            <button class="btn btn-large no-glow">Large</button>
+            <p class="desc">Bigger padding and text for emphasis.</p>
+        </div>
+    </div>
 </body>
 </html>
