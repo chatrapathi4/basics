@@ -2,11 +2,12 @@ h1{
     color: blue;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
+    font-size: 80px;
 }
 p{
     color: #500d0d;
-    font-size: 10px;
+    font-size: 50px;
     text-align:center;
-    word-spacing: 50px;
-    text-shadow: 8px 5px 5px rgb(75, 2, 2);
+    word-spacing: 5px;
+    text-shadow: 2px 2px 5px rgb(75, 2, 2);
 }
