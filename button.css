@@ -94,36 +94,32 @@ html, body{
 
 /* each card holds a button + description */
 .card{
-    background: rgba(255,255,255,0.03);
+    background: var(--card-bg, rgba(255,255,255,0.03));
     border: 1px solid rgba(255,255,255,0.06);
     padding: 18px;
     border-radius: 12px;
     width: 220px;
-
-    /* force identical card size */
-    height: 240px;           /* fixed height for uniform cards */
-    box-sizing: border-box;  /* include padding in height */
+    height: 240px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* center content vertically */
+    justify-content: center;
     align-items: center;
     gap: 12px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.6);
     text-align: center;
 }
 
-/* description text under each button */
+/* slightly stronger desc color for contrast on colored cards */
 .desc{
-    color: #ddd;
+    color: rgba(255,255,255,0.92);
     font-size: 14px;
     line-height: 1.3;
     margin: 0;
-
-    /* keep descriptions from stretching the card */
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* limit to 3 lines */
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
 
@@ -294,4 +290,29 @@ html, body{
     .container{gap:12px;padding:12px;}
     .card{width:100%;}
     html,body{transform:scale(1); padding: 12px;}
+}
+
+/* per-variant muted card backgrounds that match the button color family */
+.card--glow    { --card-bg: #5c5a5a; }
+.card--outline { --card-bg: #5c5a5a; }       /* orange tint */
+.card--simple  { --card-bg: #5c5a5a; }       /* neutral dark */
+.card--rounded { --card-bg: #5c5a5a; }     /* purple tint */
+.card--large   { --card-bg: #5c5a5a; }      /* teal tint */
+.card--gradient{ --card-bg: #5c5a5a; }     /* warm gradient tint */
+.card--3d      { --card-bg: #5c5a5a; }    /* light grey for 3D */
+.card--neon    { --card-bg: #5c5a5a; }    /* neon glow tint */
+.card--glass   { --card-bg: #5c5a5a; }    /* subtle glass */
+.card--ripple  { --card-bg: #5c5a5a; }      /* blue tint */
+.card--skew    { --card-bg: #5c5a5a; }    /* peach tint */
+.card--icon    { --card-bg: #5c5a5a; }    /* gold tint */
+.card--loading { --card-bg: #5c5a5a; }       /* muted dark */
+
+/* subtle border color per card (optional: improves separation) */
+.card--3d    { border-color: rgba(0,0,0,0.08); }
+.card--gradient,
+.card--ripple { border-color: rgba(255,255,255,0.06); }
+
+/* ensure button stands out: give buttons a faint elevated surface */
+.card .btn{
+    box-shadow: 0 6px 12px rgba(0,0,0,0.35);
 }
