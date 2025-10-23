@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Navbar Gallery</title>
+  <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+  <h1>Navbar Gallery</h1>
+
+  <div class="container">
+    <!-- Classic left logo + right links -->
+    <div class="card">
+      <nav class="nav nav--classic" aria-label="classic navbar">
+        <div class="brand">Brand</div>
+        <ul class="links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <p class="desc">Classic left-logo, right-links layout.</p>
+    </div>
+
+    <!-- Centered nav -->
+    <div class="card">
+      <nav class="nav nav--center" aria-label="centered navbar">
+        <ul class="links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li class="brand">Centered</li>
+          <li><a href="#">Work</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <p class="desc">Centered brand inside navigation.</p>
+    </div>
+
+    <!-- Gradient sticky -->
+    <div class="card">
+      <nav class="nav nav--gradient" aria-label="gradient navbar">
+        <div class="brand">Gradi</div>
+        <ul class="links">
+          <li><a href="#">Docs</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Changelog</a></li>
+        </ul>
+      </nav>
+      <p class="desc">Gradient background and subtle shadow.</p>
+    </div>
+
+    <!-- Glass / translucent -->
+    <div class="card">
+      <nav class="nav nav--glass" aria-label="glass navbar">
+        <div class="brand">Glass</div>
+        <ul class="links">
+          <li><a href="#">Demo</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </nav>
+      <p class="desc">Frosted glass effect, blends with page.</p>
+    </div>
+
+    <!-- Neon -->
+    <div class="card">
+      <nav class="nav nav--neon" aria-label="neon navbar">
+        <div class="brand">NEON</div>
+        <ul class="links">
+          <li><a href="#">Play</a></li>
+          <li><a href="#">Scores</a></li>
+          <li><a href="#">Store</a></li>
+        </ul>
+      </nav>
+      <p class="desc">Neon outline and glow on links.</p>
+    </div>
+
+    <!-- Icon / Minimal -->
+    <div class="card">
+      <nav class="nav nav--icons" aria-label="icon navbar">
+        <div class="brand">UI</div>
+        <ul class="links">
+          <li><a aria-label="search" href="#">🔍</a></li>
+          <li><a aria-label="notifications" href="#">🔔</a></li>
+          <li><a aria-label="profile" href="#">👤</a></li>
+        </ul>
+      </nav>
+      <p class="desc">Compact icon-only actions for toolbars.</p>
+    </div>
+
+    <!-- Hamburger responsive (preview) -->
+    <div class="card">
+      <nav class="nav nav--hamburger" aria-label="hamburger navbar">
+        <div class="brand">Menu</div>
+        <button class="hamb" aria-expanded="false" aria-label="Open menu">☰</button>
+        <ul class="links">
+          <li><a href="#">Overview</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </nav>
+      <p class="desc">Hamburger toggles links (works on click).</p>
+    </div>
+
+    <!-- Vertical sidebar -->
+    <div class="card">
+      <nav class="nav nav--sidebar" aria-label="sidebar navbar">
+        <div class="brand">Side</div>
+        <ul class="links">
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Reports</a></li>
+          <li><a href="#">Settings</a></li>
+        </ul>
+      </nav>
+      <p class="desc">Vertical sidebar style (compact preview).</p>
+    </div>
+  </div>
+
+  <script>
+    // small JS to toggle hamburger in this demo
+    document.addEventListener('click', function(e){
+      const btn = e.target.closest('.hamb');
+      if(!btn) return;
+      const nav = btn.closest('.nav');
+      const exp = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!exp));
+      nav.classList.toggle('open');
+    });
+
+    // make nav links keyboard accessible in cards preview
+    document.addEventListener('keydown', function(e){
+      if((e.key === 'Enter' || e.key === ' ') && document.activeElement.matches('.hamb')){
+        e.preventDefault();
+        document.activeElement.click();
+      }
+    });
+  </script>
+</body>
+</html>
