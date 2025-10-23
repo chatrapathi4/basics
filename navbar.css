@@ -1,4 +1,4 @@
-/* Gallery layout (matches button gallery sizing) */
+
 :root{
   --card-w:220px;
   --card-h:240px;
@@ -18,40 +18,43 @@ html,body{
 
 h1{ text-align:center; font-size:36px; margin-bottom:18px; }
 
-/* container and card mimic the sizes used in [button.css](button.css) */
 .container{
-  display:flex;
-  flex-wrap:wrap;
-  gap:28px;
-  max-width:1200px;
-  margin:0 auto;
-  justify-content:center;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: none;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding: 20px;
 }
 .card{
-  width:var(--card-w);
-  height:var(--card-h);
-  background:var(--muted);
-  border-radius:12px;
-  padding:16px;
-  box-sizing:border-box;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  gap:10px;
-  box-shadow:0 6px 18px rgba(0,0,0,0.5);
+  width: 100%;
+  height: auto;
+  background: var(--muted);
+  border-radius: 8px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  text-align: left;
+  gap: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
 }
 
 /* base nav */
 .nav{
-  width:100%;
-  display:flex;
-  align-items:center;
-  gap:12px;
-  justify-content:space-between;
-  padding:6px 10px;
-  border-radius:8px;
+  width: 98%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: space-between;
+  padding: 8px 12px;
+  /* don't round nav separately — let the card control the radius visually */
+  border-radius: 8px; 
 }
 
 /* brand and links */
