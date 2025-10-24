@@ -5,16 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>UI Gallery — Home</title>
-    <style>
-      /* small local tweaks so the home page looks good with existing style.css */
-      .home-wrap { max-width: 1000px; margin: 40px auto; padding: 24px; text-align: center; }
-      .intro { font-size: 18px; color: #222; margin-bottom: 20px; }
-      .links { display:flex; gap:16px; justify-content:center; margin:20px 0; flex-wrap:wrap; }
-      .links a { text-decoration:none; }
-      .preview-btn { padding: 14px 26px; border-radius:12px; background:#2b1055; color:#fff; font-weight:600; border:none; cursor:pointer; }
-      .preview-btn.secondary { background:#444; }
-      footer { margin-top: 28px; font-size:14px; color:#333; }
-    </style>
+    <!-- styles for home page moved to style.css -->
 </head>
 <body>
   <div class="home-wrap">
@@ -31,8 +22,8 @@
     </div>
 
     <section>
-      <h2 style="margin-top:18px;">Quick notes</h2>
-      <ul style="text-align:left; display:inline-block; margin-top:12px;">
+      <h2 class="section-title">Quick notes</h2>
+      <ul class="quick-list">
         <li>Buttons styles live in <code>button.css</code> — see the [`.btn`](button.css) rules.</li>
         <li>Navbar styles live in <code>navbar.css</code> — see the [`.nav`](navbar.css) rules.</li>
         <li>Global heading styles are in <code>style.css</code> — see the [`h1`](style.css) rule.</li>
