@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="navbar.css" />
-    <title>UI Gallery — Home</title>
-    <!-- styles for home page moved to style.css -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#5b21b6" />
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <title>UI Gallery — Home</title>
 </head>
 <body>
-    <!-- added full-width navbar (uses .nav / .nav--classic from navbar.css) -->
+  <header>
     <nav class="nav nav--classic" aria-label="site navigation">
       <div class="brand">UI Gallery</div>
       <ul class="links">
@@ -19,32 +20,46 @@
         <li><a href="#">Docs</a></li>
       </ul>
     </nav>
+  </header>
 
-  <div class="home-wrap">
-    <h1>Hello World</h1>
+  <main class="home-wrap">
+    <section class="hero">
+      <div class="hero-content">
+        <h1 class="hero-title">Design system playground</h1>
+        <p class="hero-sub">A compact gallery of buttons, navbars and UI patterns — fast to preview, easy to reuse.</p>
 
-    <p class="intro">
-      Welcome — explore the component galleries. Open the Buttons gallery to see many button styles and interactions,
-      or the Navbars gallery for full-width navigation examples.
-    </p>
+        <div class="hero-ctas">
+          <a class="preview-btn primary" href="button.html">Explore Buttons</a>
+          <a class="preview-btn outline" href="navbar.html">Explore Navbars</a>
+        </div>
 
-    <div class="links">
-      <a href="button.html"><button class="preview-btn">Open Buttons Gallery</button></a>
-      <a href="navbar.html"><button class="preview-btn secondary">Open Navbars Gallery</button></a>
-    </div>
+        <ul class="features">
+          <li>Responsive, modern components</li>
+          <li>Accessible interactions & keyboard friendly</li>
+          <li>Easy to fork and extend</li>
+        </ul>
+      </div>
 
-    <section>
-      <h2 class="section-title">Quick notes</h2>
-      <ul class="quick-list">
-        <li>Buttons styles live in <code>button.css</code> — see the [`.btn`](button.css) rules.</li>
-        <li>Navbar styles live in <code>navbar.css</code> — see the [`.nav`](navbar.css) rules.</li>
-        <li>Global heading styles are in <code>style.css</code> — see the [`h1`](style.css) rule.</li>
-      </ul>
+      <div class="hero-visual" aria-hidden="true">
+        <!-- simple visual hint: stacked cards -->
+        <div class="visual-card card--glow">RGB</div>
+        <div class="visual-card card--gradient">Gradient</div>
+        <div class="visual-card card--neon">Neon</div>
+      </div>
     </section>
 
-    <footer>
-      <small>Preview pages: <a href="button.html">Buttons</a> · <a href="navbar.html">Navbars</a></small>
-    </footer>
-  </div>
+    <section class="notes">
+      <h2>Quick notes</h2>
+      <ul class="quick-list">
+        <li>Buttons styles: <code>button.css</code> — see the [`.btn`](button.css) rules.</li>
+        <li>Navbar styles: <code>navbar.css</code> — see the [`.nav`](navbar.css) rules.</li>
+        <li>This page styles: <code>style.css</code> — see the [`.home-wrap`](style.css) and [`.preview-btn`](style.css) rules.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>Built for preview · <a href="button.html">Buttons</a> · <a href="navbar.html">Navbars</a></small>
+  </footer>
 </body>
 </html>
