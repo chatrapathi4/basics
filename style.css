@@ -1,3 +1,68 @@
+:root{
+  --bg-1: linear-gradient(180deg,#6a0dad,#4b0082);
+  --card-bg: rgba(255,255,255,0.04);
+  --muted: rgba(255,255,255,0.65);
+  --accent: #7c3aed;
+  --glass: rgba(255,255,255,0.06);
+  --radius: 12px;
+  --container-max: 1100px;
+  --gap: 20px;
+  --glass-strong: rgba(255,255,255,0.08);
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:var(--bg-1);color:#fff;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+header{position:sticky;top:0;backdrop-filter: blur(6px);-webkit-backdrop-filter:blur(6px);z-index:50;padding:12px 20px}
+
+/* keep existing navbar rules from [navbar.css](navbar.css) — they will style the nav */
+nav.nav{max-width:var(--container-max);margin:0 auto;padding:6px 12px}
+
+/* Main layout */
+.home-wrap{max-width:var(--container-max);margin:36px auto;padding:28px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));border-radius:var(--radius);box-shadow:0 12px 40px rgba(0,0,0,0.5);display:flex;flex-direction:column;gap:24px}
+
+/* HERO */
+.hero{display:flex;align-items:center;gap:28px;flex-wrap:wrap;justify-content:space-between;padding:6px}
+.hero-content{flex:1;min-width:280px}
+.hero-title{font-size:clamp(28px,4vw,44px);margin:0 0 10px;font-weight:800;letter-spacing:-0.02em}
+.hero-sub{margin:0 0 18px;color:var(--muted);font-size:1.05rem}
+
+/* CTAs */
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.preview-btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:10px;border:0;font-weight:700;cursor:pointer;transition:transform .12s ease, box-shadow .12s ease}
+.preview-btn.primary{background:linear-gradient(90deg,var(--accent),#4f46e5);box-shadow:0 8px 20px rgba(92,33,182,0.28);color:white}
+.preview-btn.outline{background:transparent;border:1px solid rgba(255,255,255,0.12);color:var(--muted)}
+.preview-btn:hover{transform:translateY(-3px);}
+
+/* Features */
+.features{display:flex;gap:18px;list-style:none;padding:0;margin:0;color:var(--muted);font-weight:600;flex-wrap:wrap}
+.features li{background:var(--glass);padding:8px 12px;border-radius:10px;color:var(--muted);font-size:.95rem}
+
+/* simple visual column */
+.hero-visual{width:260px;display:flex;flex-direction:column;gap:12px;align-items:flex-end}
+.visual-card{width:120px;height:64px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#111}
+.visual-card.card--glow{background:linear-gradient(90deg,#3b82f6,#7c3aed)}
+.visual-card.card--gradient{background:linear-gradient(90deg,#ff7a18,#af002d)}
+.visual-card.card--neon{background:linear-gradient(90deg,#00e5ff,#7c3aed);box-shadow:0 6px 18px rgba(0,229,255,0.08)}
+
+/* Notes section */
+.notes{padding:12px;border-radius:8px;background:transparent}
+.quick-list{margin:8px 0 0;padding-left:18px;color:var(--muted)}
+
+/* Footer */
+.site-footer{max-width:var(--container-max);margin:22px auto;padding:8px 20px;text-align:center;color:rgba(255,255,255,0.75)}
+
+/* responsive */
+@media (max-width:920px){
+  .hero{flex-direction:column;align-items:flex-start}
+  .hero-visual{width:100%;flex-direction:row;justify-content:flex-start}
+}
+@media (max-width:520px){
+  .features{flex-direction:column}
+  nav.nav .links{display:none} /* keep nav compact on very small screens */
+}
+
 h1{
     color: blue;
     font-family: 'Times New Roman', Times, serif;
