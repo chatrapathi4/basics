@@ -38,7 +38,6 @@
       <p class="desc">Centered brand inside navigation.</p>
     </div>
 
-    <!-- Gradient sticky -->
     <div class="card">
       <nav class="nav nav--gradient" aria-label="gradient navbar">
         <div class="brand">Gradi</div>
@@ -51,7 +50,6 @@
       <p class="desc">Gradient background and subtle shadow.</p>
     </div>
 
-    <!-- Glass / translucent -->
     <div class="card">
       <nav class="nav nav--glass" aria-label="glass navbar">
         <div class="brand">Glass</div>
@@ -64,7 +62,6 @@
       <p class="desc">Frosted glass effect, blends with page.</p>
     </div>
 
-    <!-- Neon -->
     <div class="card">
       <nav class="nav nav--neon" aria-label="neon navbar">
         <div class="brand">NEON</div>
@@ -77,7 +74,6 @@
       <p class="desc">Neon outline and glow on links.</p>
     </div>
 
-    <!-- Icon / Minimal -->
     <div class="card">
       <nav class="nav nav--icons" aria-label="icon navbar">
         <div class="brand">UI</div>
@@ -90,7 +86,6 @@
       <p class="desc">Compact icon-only actions for toolbars.</p>
     </div>
 
-    <!-- Hamburger responsive (preview) -->
     <div class="card">
       <nav class="nav nav--hamburger" aria-label="hamburger navbar">
         <div class="brand">Menu</div>
@@ -104,7 +99,6 @@
       <p class="desc">Hamburger toggles links (works on click).</p>
     </div>
 
-    <!-- Vertical sidebar -->
     <div class="card">
       <nav class="nav nav--sidebar" aria-label="sidebar navbar">
         <div class="brand">Side</div>
@@ -119,7 +113,6 @@
   </div>
 
   <script>
-    // small JS to toggle hamburger in this demo
     document.addEventListener('click', function(e){
       const btn = e.target.closest('.hamb');
       if(!btn) return;
@@ -129,7 +122,6 @@
       nav.classList.toggle('open');
     });
 
-    // make nav links keyboard accessible in cards preview
     document.addEventListener('keydown', function(e){
       if((e.key === 'Enter' || e.key === ' ') && document.activeElement.matches('.hamb')){
         e.preventDefault();
