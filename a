@@ -153,30 +153,3 @@ html, body {
     color: #fff;
     position: relative;
 }
-.btn-wavy::after {
-    content: '';
-    position: absolute;
-    left: 10%;
-    right: 10%;
-    bottom: 6px;
-    height: 2px;
-    background: linear-gradient(90deg,#ff758c,#ffa751);
-    animation: wave 5s linear infinite;
-}
-@keyframes wave {
-    0% {background-position: 0 0;}
-    50% {background-position: 100% 0;}
-    100% {background-position: 0 0;}
-}
-
-.btn-icon-circle {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 22px;
-    background: radial-gradient(circle, #ffb347, #ffcc33);
-    color: #111;
-}
