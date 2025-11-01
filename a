@@ -202,22 +202,3 @@ html, body {
 @keyframes spin {
     to { transform: translateY(-50%) rotate(360deg); }
 }
-
-h1 {
-    text-align: center;
-    width: 100%;
-    font-size: 38px;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-}
-
-.desc {
-    color: rgba(255,255,255,0.75);
-    font-size: 14px;
-    line-height: 1.4;
-}
-
-@media (max-width: 640px) {
-    .container { padding: 18px; gap: 16px; }
-    .card { width: 100%; }
-}
